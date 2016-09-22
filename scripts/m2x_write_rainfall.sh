@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-DEVICE_ID="87b5f5569345d527f8a0cd5bab1b3871"
-M2X_API_KEY="978e930b51c396e506fb6b78f7c38197"
+DEVICE_ID="83e740e6e0b40d51acdcccd4832bf8c6"
+M2X_API_KEY="ec2e90fdf6f85173ad23574381b23b2d"
 
 m2x_write() {
     local body=$(curl -s -H "X-M2X-KEY: ${M2X_API_KEY}" \
@@ -16,7 +16,7 @@ m2x_write() {
 while :
 do
 
-    m2x_write "{ \"value\": $(( ( RANDOM % 10 )  + 25 )) }"
+    m2x_write "{ \"value\": $(( ( RANDOM % 10 ) )) }"
 
     sleep 30
 done
